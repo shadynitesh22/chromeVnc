@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: alpine.Dockerfile
+    network_mode: "host"
+    environment:
+     - EXTRA_CHROME_OPTION=--lang=fr-FR,fr
+     - X11_W=1024
+     - X11_H=768
+     - LANG=fr_FR.UTF-8
+     - LC_ALL=fr_FR.UTF-8
